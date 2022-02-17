@@ -28,27 +28,27 @@
 
                     <!-- income section -->
                     <h3>Income</h3>
-                    <p class="fw-bold">income: <input id="income-input" type="text"></p>
+                    <p class="fw-bold">income: <input id="income-input" type="number"></p>
 
                     <!-- expenses section -->
                     <h3>Expenses</h3>
-                    <p class="fw-bold">Food: <input id="food-input" type="text"></p>
-                    <p class="fw-bold">Rent: <input id="rent-input" type="text"></p>
-                    <p class="fw-bold">Clothes: <input id="clothes-input" type="text"></p>
+                    <p class="fw-bold">Food: <input id="food-input" type="number"></p>
+                    <p class="fw-bold">Rent: <input id="rent-input" type="number"></p>
+                    <p class="fw-bold">Clothes: <input id="clothes-input" type="number"></p>
 
                     <!-- calculator button -->
-                    <button id="calculator-btn" class="px-5 py-2">Calculate</button>
+                    <button onclick="errorFunction()" id="calculator-btn" class="px-5 py-2">Calculate</button>
 
                     <!-- total expenses section -->
                     <h3 class="mt-3">Total Expenses:<span id="expenses-total">0</span></h3>
 
                     <!-- Balance section -->
                     <h3 class="mt-3">Balance:<span id="balance-total">0</span></h3>
-                    
+
                     <!-- save section -->
                     <h5>Save:
-                         <input type="text"> % 
-                         <button id="save-btn" class="px-3 py-2 mt-2">Save</button>
+                        <input id="save-input" type="number"> %
+                        <button id="save-btn" class="px-3 py-2 mt-2">Save</button>
                     </h5>
 
                     <!-- Saving ammout -->
