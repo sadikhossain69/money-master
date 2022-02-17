@@ -33,7 +33,7 @@ function errorCalculateFunction() {
     alert('Please enter somethings in the input')
   }
   else if ( expensesTotal > incomeValue) {
-    alert('You do not have too money to spend')
+    alert('You do not have too money to spend') 
   }
 }
 
