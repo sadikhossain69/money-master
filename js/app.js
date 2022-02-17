@@ -23,10 +23,6 @@ function errorCalculateFunction() {
   const clothesInput = isUpdate('clothes', '-input').value
   const clothesValue = parseFloat(clothesInput)
 
-  // save input
-  const saveInput = isUpdate('save', '-input').value
-  const saveValue = parseFloat(saveInput)
-
   // expenses total 
   let expensesTotal = isUpdate('expenses', '-total').innerText
   const expensesValue = parseFloat(expensesTotal)
@@ -42,7 +38,27 @@ function errorCalculateFunction() {
 }
 
 // error handle save
+function errorSavingFunction() {
 
+  // save input
+  const saveInput = isUpdate('save', '-input').value
+  const saveValue = parseFloat(saveInput)
+
+  // income input 
+  const incomeInput = isUpdate('income', '-input').value
+  const incomeValue = parseFloat(incomeInput)
+
+  const totalSave = (incomeValue * saveValue) / 100;
+  const totalSaveValue = totalSave;
+
+  // error handling save button
+  if(isNaN(saveValue)){
+    alert('Please enter somethings in the input')
+  }
+  else if( totalSaveValue > incomeValue){
+    alert('You do not have enough money to save')
+  }
+}
 
 
 // calculate button handle
