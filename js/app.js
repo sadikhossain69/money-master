@@ -1,17 +1,48 @@
-
+// ID calling function
 function isUpdate(event1, event2) {
   const allID = document.getElementById(event1 + event2);
   return allID;
 }
 
-// function errorFunction() {
-//   const foodCost = isUpdate('food', '-input').value
-//   const foodMoney = parseFloat(foodCost)
-//   const incomeCost = document.getElementById('income-input').value
-//   if(foodMoney < 0 ) {
-//     alert('d')
-//   }
-// }
+// error handling calculate
+function errorCalculateFunction() {
+
+  // income input
+  const incomeInput = isUpdate('income', '-input').value
+  const incomeValue = parseFloat(incomeInput)
+
+  // food input
+  const foodInput = isUpdate('food', '-input').value
+  const foodValue = parseFloat(foodInput)
+
+  // rent input
+  const rentInput = isUpdate('rent', '-input').value
+  const rentValue = parseFloat(rentInput)
+
+  // clothes input 
+  const clothesInput = isUpdate('clothes', '-input').value
+  const clothesValue = parseFloat(clothesInput)
+
+  // save input
+  const saveInput = isUpdate('save', '-input').value
+  const saveValue = parseFloat(saveInput)
+
+  // expenses total 
+  let expensesTotal = isUpdate('expenses', '-total').innerText
+  const expensesValue = parseFloat(expensesTotal)
+  expensesTotal.innerText = expensesValue
+
+  // error condition
+  if(isNaN(incomeValue) || isNaN(foodValue) || isNaN(rentValue) || isNaN(clothesValue) ) {
+    alert('Please enter somethings in the input')
+  }
+  else if ( expensesTotal > incomeValue) {
+    alert('You do not have too money to spend')
+  }
+}
+
+// error handle save
+
 
 
 // calculate button handle
